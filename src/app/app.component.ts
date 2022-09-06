@@ -16,15 +16,17 @@ export class AppComponent implements OnInit {
 
   products: IProduct[] = []
  
-  loading: false
+  loading = false
 
   constructor (private productsService: ProductsService) {
 
   }
 
   ngOnInit(): void {
+    this.loading = true
     this.productsService.getAll().subscribe(products => {
       this.products = products
+      this.loading = false
     })
     
   }
