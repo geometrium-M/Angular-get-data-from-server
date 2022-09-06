@@ -6,17 +6,19 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product/product.component';
 import {HttpClientModule} from '@angular/common/http';
 import { GlobalErrorComponent } from './components/global-error/global-error.component'
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    GlobalErrorComponent
+    GlobalErrorComponent,
+   
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
