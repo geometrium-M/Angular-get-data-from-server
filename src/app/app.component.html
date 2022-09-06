@@ -16,9 +16,13 @@
 [product]="product"
 ></app-product>-->
 
-<app-product *ngFor="let product of products$ | async;" 
-[product]="product"
-></app-product>
+<div *ngIf="products$ | async as products">
+    <app-product 
+    *ngFor="let product of products | filterProducts: term" 
+    [product]="product"
+    ></app-product>
+</div>
+
 
 
 
