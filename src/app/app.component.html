@@ -11,6 +11,10 @@
 
 <p *ngIf="loading" class="text-center text-lg">Loading...</p>
 
+<app-modal>
+    <app-create-product></app-create-product>
+</app-modal>
+
 
 <app-product *ngFor="let product of products | filterProducts: term" 
 [product]="product"
