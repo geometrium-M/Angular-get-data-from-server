@@ -1,38 +1,10 @@
 <app-global-error></app-global-error>
 
 
-<p class="font-bold text-center mb-2 mt-5">{{title}}</p>
-
-<input 
-    type="text" 
-    placeholder="Search products..." 
-    class=" mb-2 border py-2 px-4 w-96 flex items-center m-auto"
-    [(ngModel)]="term">
-
-<p *ngIf="loading" class="text-center text-lg">Loading...</p>
-
-<app-modal *ngIf="modalService.isVisible$ | async">
-    <app-create-product></app-create-product>
-</app-modal>
-
-<button
-class="rounded-[100%] bg-red-700 text-white fixed right-5 bottom-5 py-2 px-4"
-(click)="modalService.open()"
->+</button>
-
-<div>
-    <app-product *ngFor="let product of productsService.products | filterProducts: term" 
-    [product]="product"
-    ></app-product>
-</div>
+<router-outlet></router-outlet>
 
 
-<!--<div *ngIf="products$ | async as products">
-    <app-product 
-    *ngFor="let product of products | filterProducts: term" 
-    [product]="product"
-    ></app-product>
-</div>-->
+
 
 
 

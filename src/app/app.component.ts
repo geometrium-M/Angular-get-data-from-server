@@ -12,43 +12,11 @@ import { ProductsService } from './services/products.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
   
 
-  title = 'Angular project'
-
- 
- 
-  loading = false
-
-  //products$: Observable<IProduct[]> 
-
-  products: IProduct[] = []
   
-  term = ''
-
-  constructor (
-    public productsService: ProductsService,
-    public modalService: ModalService
-    ) {
-
-  }
-
-  ngOnInit(): void {
-    this.loading = true
-    this.productsService.getAll().subscribe( ( )=> 
-      this.loading = false
-    ) 
-
-    /*this.loading = true
-    this.products$ = this.productsService.getAll().pipe( 
-      tap(()=> this.loading = false)
-    )*/
-   
-    
-    
-  }
  
   
 }

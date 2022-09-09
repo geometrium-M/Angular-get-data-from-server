@@ -14,6 +14,7 @@ import { AboutPageComponent } from './components/about-page/about-page.component
 
 import { FocusDirective } from './directives/focus.directive';
 import { FilterProductsPipe } from './pipes/filter-products.pipe';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FilterProductsPipe } from './pipes/filter-products.pipe';
     FocusDirective,
     ProductPageComponent,
     AboutPageComponent,
+    NavigationComponent,
    
   ],
   imports: [
