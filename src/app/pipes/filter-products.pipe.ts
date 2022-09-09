@@ -3,12 +3,14 @@ import { IProduct } from '../model/product';
 
 
 @Pipe({
-  name: 'filterProducts'
+  name: 'filterProducts',
+  pure: false
+ 
 })
 export class FilterProductsPipe implements PipeTransform {
 
-  transform(product: IProduct[], search: string): IProduct[] {
-    return product.filter(product => product.title.toLowerCase().includes(search.toLowerCase()))
+  transform(products: IProduct[], search: string): IProduct[] {
+    return products.filter(product => product.title.toLowerCase().includes(search.toLowerCase()))
   }
 
 }
